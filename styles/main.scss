@@ -1,0 +1,971 @@
+@import "base/base";
+@import "fonts";
+@import "base/mixins";
+@import "base/variables";
+
+body {
+  width: 1440px;
+  margin: 0 auto;
+
+  header {
+    @include size(1440px, 700px);
+    background: {
+      image: url(images/Background.png);
+      repeat: no-repeat;
+      size: contain;
+    }
+
+    .header-content {
+      width: 900px;
+      margin: 0 auto;
+
+      .text-above {
+        padding-top: 18px;
+        display: flex;
+        justify-content: space-between;
+
+        .site-name {
+          margin-top: 26px;
+
+          h3 {
+            font: {
+              family: $main-font;
+              size: 20px;
+            }
+            line-height: 24px;
+            color: $light-color;
+          }
+        }
+
+        .buttons {
+          margin-top: 24px;
+
+          .first {
+            @include size(90px, 36px);
+            font: {
+              family: $first-font;
+              size: 14px;
+            }
+            color: $light-color;
+            border-radius: 40px;
+            border: none;
+            background-color: transparent;
+
+            &:hover {
+              border: 2px solid $light-color;
+            }
+          }
+
+          .second {
+            @extend .first;
+          }
+        }
+      }
+
+      .text-center {
+        width: 470px;
+        margin: 153px auto 0;
+
+        h1 {
+          font: {
+            size: 52px;
+            family: $main-font;
+          }
+          @include properties(63px, $light-color, center);
+        }
+
+        p {
+          font: {
+            size: 24px;
+            family: $second-font;
+          }
+          @include properties(24px, $text-p-light, center);
+          margin-top: 28px;
+        }
+
+        .button-center {
+          margin-top: 33px;
+          display: flex;
+          justify-content: center;
+
+          .third {
+            @include size(225px, 36px);
+            font: {
+              family: $main-font;
+              size: 14px;
+              weight: bold;
+            }
+            color: $light-color;
+            border-radius: 40px;
+            border: none;
+            background-color: $red-color;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    width: 940px;
+    margin: 70px auto 0;
+
+    .header-dreamshare-works {
+      margin-bottom: 35px;
+
+      h3 {
+        font: {
+          size: 26px;
+          weight: bold;
+          family: $main-font;
+        }
+        @include properties(32px, $dark-color, center);
+      }
+    }
+
+    .three-steps {
+      display: flex;
+      justify-content: space-between;
+
+      .step-1 {
+        @include size(300px, 400px);
+        background: {
+          image: url(./images/Step1-image.png);
+          repeat: no-repeat;
+          size: contain;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 0 25px 21px;
+
+        .button1-step1 {
+          font: {
+            size: 10px;
+            family: $first-font;
+          }
+          line-height: 12px;
+          border: none;
+        }
+
+        .button1-step1 {
+          @include size(70px, 20px);
+          color: $light-color;
+          background-color: $red-color;
+          border-radius: 40px;
+        }
+
+        .text-step1 {
+          margin-top: 25px;
+
+          h3 {
+            font: {
+              size: 24px;
+              family: $main-font;
+            }
+            line-height: 26px;
+            color: $light-color;
+          }
+
+          p {
+            font: {
+              size: 14px;
+              family: $second-font;
+            }
+            line-height: 14px;
+            color: #e3e3e3;
+          }
+        }
+      }
+
+      .step-2 {
+        @extend .step-1;
+        background-image: url(./images/Step2-image.png);
+      }
+
+      .step-3 {
+        @extend .step-1;
+        background-image: url(./images/Step3-image.png);
+      }
+    }
+
+    .meet-partner {
+      width: 940px;
+      margin: 90px auto 0;
+
+      .header-meet-partner {
+        margin-bottom: 35px;
+
+        h3 {
+          font: {
+            size: 26px;
+            weight: bold;
+            family: $main-font;
+          }
+          @include properties(32px, $dark-color, center);
+        }
+      }
+
+      .all-partners {
+        display: flex;
+        .info-about-1 {
+          display: flex;
+          margin-right: 19px;
+          .Bradley-Hunter {
+            width: 221px;
+            margin-right: 19px;
+
+            .Bradley-Hunter-img {
+              @include size(120px, 120px);
+              background-image: url(./images/Bradley-Hunter.png);
+              margin: 0 auto;
+              border-radius: 60px;
+              position: relative;
+            }
+
+            .Bradley-Hunter-img:after {
+              content: url(./images/note-icon.png);
+              padding: 8px 12px 6px 9px;
+              border: 4px solid $light-color;
+              border-radius: 50px;
+              background-color: $red-color;
+              position: absolute;
+              right: -6px;
+              bottom: -3px;
+            }
+
+            .first-last-name-1 {
+              width: 221px;
+              margin-top: 17px;
+            }
+          }
+
+          h5 {
+            font: {
+              size: 14px;
+              family: $main-font;
+            }
+            @include properties(17px, $dark-color, center);
+          }
+
+          p {
+            font: {
+              size: 14px;
+              family: $second-font;
+            }
+            @include properties(14px, #666666, center);
+            margin-top: 25px;
+          }
+
+          .Marie-Bennett {
+            width: 221px;
+            .Marie-Bennett-img {
+              @include size(120px, 120px);
+              background-image: url(./images/Marie-Bennett.png);
+              margin: 0 auto;
+              border-radius: 60px;
+              position: relative;
+            }
+
+            .Marie-Bennett-img:after {
+              content: url(./images/brush-icon.png);
+              padding: 8px 9px 6px 7px;
+              border: 4px solid $light-color;
+              border-radius: 50px;
+              background-color: #19d4ca;
+              position: absolute;
+              right: -6px;
+              bottom: -3px;
+            }
+
+            .first-last-name-2 {
+              width: 221px;
+              margin-top: 17px;
+            }
+          }
+        }
+        .info-about-2 {
+          display: flex;
+          .Diana-Wells {
+            margin-right: 19px;
+            .Diana-Wells-img {
+              @include size(120px, 120px);
+              background-image: url(./images/Diana-Wells.png);
+              margin: 0 auto;
+              border-radius: 60px;
+              position: relative;
+            }
+
+            .Diana-Wells-img:after {
+              content: url(./images/camera-icon.png);
+              padding: 8px 9px 7px 8px;
+              border: 4px solid $light-color;
+              border-radius: 50px;
+              background-color: #ffa710;
+              position: absolute;
+              right: -6px;
+              bottom: -3px;
+            }
+
+            .first-last-name-3 {
+              width: 221px;
+              margin-top: 17px;
+            }
+          }
+          h5 {
+            font: {
+              size: 14px;
+              family: $main-font;
+            }
+            @include properties(17px, $dark-color, center);
+          }
+
+          p {
+            font: {
+              size: 14px;
+              family: $second-font;
+            }
+            @include properties(14px, #666666, center);
+            margin-top: 25px;
+          }
+
+          .Christopher-Pierce {
+            .Christopher-Pierce-img {
+              @include size(120px, 120px);
+              background-image: url(./images/Cristopher-Pierce.png);
+              margin: 0 auto;
+              border-radius: 60px;
+              position: relative;
+            }
+
+            .Christopher-Pierce-img:after {
+              content: url(./images/plane-icon.png);
+              padding: 8px 8px 5px 7px;
+              border: 4px solid $light-color;
+              border-radius: 50px;
+              background-color: #667df3;
+              position: absolute;
+              right: -6px;
+              bottom: -3px;
+            }
+
+            .first-last-name-4 {
+              width: 221px;
+              margin-top: 17px;
+            }
+          }
+        }
+      }
+
+      .see-other-partners {
+        width: 940px;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+
+        .other-partners-btn {
+          @include size(180px, 40px);
+          font: {
+            size: 14px;
+            family: $main-font;
+          }
+          background-color: $light-color;
+          line-height: 17px;
+          color: $red-color;
+          border: 2px solid $red-color;
+          border-radius: 40px;
+        }
+      }
+    }
+
+    .discover-holiday {
+      width: 940px;
+      margin: 90px auto 0;
+
+      h3 {
+        font: {
+          size: 26px;
+          weight: bold;
+          family: $main-font;
+        }
+        @include properties(32px, $dark-color, center);
+        margin-bottom: 35px;
+      }
+    }
+
+    .first-row {
+      width: 940px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+
+      .sports-and-activis {
+        @include size(300px, 310px);
+        background-image: url(./images/Sports-and-Activis.png);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .img-pos-rel {
+        @include size(100%, 100%);
+        position: relative;
+
+        .images-text {
+          width: 100%;
+          font: {
+            size: 22px;
+            family: $main-font;
+          }
+          @include properties(27px, $light-color, center);
+          position: absolute;
+          top: 50%;
+          transform: translatey(-50%);
+        }
+      }
+
+      .wellness-and-health {
+        @extend .sports-and-activis;
+        background-image: url(./images/Healath.png);
+      }
+
+      .extreme-sports {
+        @extend .sports-and-activis;
+        background-image: url(./images/Extreme-Sports.png);
+      }
+    }
+
+    .second-row {
+      @extend .first-row;
+
+      .games {
+        @extend .sports-and-activis;
+        background-image: url(./images/Games.png);
+      }
+
+      .culture-and-education {
+        @include size(620px, 310px);
+        background-image: url(./images/Culture.png);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .third-row {
+      @extend .first-row;
+
+      .enjomet-and-relaxation {
+        @include size(620px, 310px);
+        background-image: url(./images/Enjomet-and-Relaxation.png);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .trevelling {
+        @extend .sports-and-activis;
+        background-image: url(./images/Trevelling.png);
+      }
+    }
+
+    .form {
+      @extend .discover-holiday;
+
+      .header-form {
+        margin-bottom: 43px;
+      }
+
+      .question {
+        width: 940px;
+        margin-top: 50px;
+
+        p {
+          font: {
+            size: 18px;
+            family: $second-font;
+          }
+          @include properties(14px, #666666, center);
+        }
+      }
+
+      .buttons-form {
+        width: 940px;
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+
+        .enter {
+          @include size(299px, 40px);
+          padding-left: 14px;
+          background-color: $light-color;
+          border: 1px solid #d4d4d4;
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.073313);
+          border-radius: 3px;
+          color: #999999;
+          line-height: 16px;
+          font: {
+            size: 14px;
+            family: $second-font;
+          }
+        }
+
+        .search {
+          @include size(172px, 40px);
+          background: $red-color;
+          margin-left: 10px;
+          border-radius: 40px;
+          border: none;
+          font: {
+            size: 14px;
+            weight: bold;
+            family: $first-font;
+          }
+          line-height: 17px;
+          color: $light-color;
+        }
+      }
+    }
+  }
+  footer {
+    width: 1440px;
+    margin-top: 100px;
+    padding-bottom: 36px;
+    border-top: 2px solid $red-color;
+
+    .footer-content {
+      width: 940px;
+      margin: 40px auto 0;
+      display: flex;
+
+      .menu {
+        width: 723px;
+        display: flex;
+
+        .container {
+          width: 241px;
+
+          a {
+            font: {
+              size: 16px;
+              weight: 600;
+              family: $first-font;
+            }
+            line-height: 20px;
+            color: $red-color;
+            text-decoration: none;
+          }
+        }
+
+        .info-about {
+          width: 241px;
+
+          .company {
+            margin-bottom: 12px;
+          }
+        }
+
+        .link {
+          font: {
+            size: 14px;
+            family: $second-font;
+          }
+          line-height: 26px;
+          color: #999999;
+          text-decoration: none;
+        }
+
+        .title {
+          font: {
+            size: 14px;
+            family: $main-font;
+          }
+          line-height: 17px;
+          margin-bottom: 12px;
+          color: $dark-color;
+          text-decoration: none;
+        }
+
+        .partners {
+          width: 241px;
+        }
+      }
+
+      .designed-by {
+        width: 217px;
+        display: flex;
+        justify-content: flex-end;
+
+        p {
+          font: {
+            size: 10px;
+            family: $main-font;
+          }
+          line-height: 12px;
+          letter-spacing: 1px;
+          margin: 0 0 7px 29px;
+          color: #cccccc;
+        }
+
+        .logo {
+          content: url(./images/Bitmap.png);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    width: 768px;
+
+    header {
+      @include size(768px, 700px);
+      background: {
+        size: cover;
+        position: center;
+      }
+      .header-content {
+        width: 670px;
+      }
+    }
+
+    main {
+      width: 748px;
+      .header-dreamshare-works {
+        h3 {
+          font-size: 22px;
+          line-height: 27px;
+        }
+      }
+      .three-steps {
+        .step-1 {
+          width: 236px;
+          background: {
+            size: cover;
+            position: left;
+          }
+        }
+      }
+      .meet-partner {
+        width: 492px;
+        .header-meet-partner {
+          h3 {
+            font-size: 22px;
+            line-height: 27px;
+          }
+        }
+        .all-partners {
+          .info-about-1 {
+            display: block;
+            .Bradley-Hunter {
+              margin-bottom: 54px;
+            }
+          }
+          .info-about-2 {
+            display: block;
+            .Diana-Wells {
+              margin-bottom: 42px;
+            }
+          }
+        }
+        .see-other-partners {
+          width: 492px;
+        }
+      }
+      .discover-holiday {
+        width: 748px;
+        h3 {
+          font-size: 22px;
+          line-height: 27px;
+        }
+      }
+      .first-row {
+        width: 748px;
+        .sports-and-activis {
+          @include background(236px, cover, center);
+        }
+        .images-text {
+          width: 98%;
+          padding: 0 12px;
+        }
+        .wellness-and-health {
+          @include background(236px, cover, center);
+        }
+        .extreme-sports {
+          @include background(236px, cover, center);
+        }
+        .games {
+          @include background(236px, cover, center);
+        }
+        .culture-and-education {
+          @include background(492px, cover, center);
+        }
+        .enjomet-and-relaxation {
+          @include background(492px, cover, center);
+        }
+        .trevelling {
+          @include background(236px, cover, center);
+        }
+      }
+      .form {
+        .question {
+          width: 748px;
+        }
+        .buttons-form {
+          width: 748px;
+        }
+      }
+    }
+    footer {
+      width: 768px;
+      .footer-content {
+        width: 692px;
+        .menu {
+          width: 596px;
+        }
+        .designed-by {
+          width: 96px;
+          p {
+            margin: 0 0 7px 26px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    width: 320px;
+    header {
+      @include size(320px, 540px);
+      background: {
+        image: url(./images/Background320.png);
+        size: cover;
+      }
+      .header-content {
+        width: 281px;
+        .text-above {
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+          .site-name {
+            margin-top: 98px;
+          }
+          .buttons {
+            margin-top: 0;
+          }
+        }
+        .text-center {
+          width: 281px;
+          margin: 28px auto 0;
+          h1 {
+            font-size: 30px;
+            line-height: 37px;
+          }
+          p {
+            font-size: 18px;
+            line-height: 24px;
+            margin-top: 5px;
+          }
+          .button-center {
+            margin-top: 15px;
+            .third {
+              @include size(280px, 40px);
+            }
+          }
+        }
+      }
+    }
+    main {
+      width: 300px;
+      margin: 35px auto 0;
+      .three-steps {
+        display: flex;
+        flex-wrap: wrap;
+        .step-1 {
+          @include size(300px, 240px);
+          margin-bottom: 10px;
+          background-image: url(./images/Step-1-320.png);
+          .text-step1 {
+            margin-top: 27px;
+            h3 {
+              line-height: 16px;
+            }
+          }
+        }
+        .step-2 {
+          background-image: url(./images/Step-2-320.png);
+        }
+        .step-3 {
+          background-image: url(./images/Step-3-320.png);
+        }
+      }
+      .meet-partner {
+        width: 300px;
+        margin: 36px auto 0;
+        .header-meet-partner {
+          margin-bottom: 14px;
+        }
+        .all-partners {
+          display: flex;
+          flex-wrap: wrap;
+          .info-about-1 {
+            margin: 0 auto;
+            .Bradley-Hunter {
+              margin: 0 0 16px 0;
+            }
+          }
+          .info-about-2 {
+            display: block;
+            margin: 16px auto 0;
+            .Diana-Wells {
+              margin: 0 0 16px 0;
+            }
+          }
+        }
+        .see-other-partners {
+          width: 300px;
+          margin-top: 36px;
+          .other-partners-btn {
+            @include size(280px, 40px);
+          }
+        }
+      }
+      .discover-holiday {
+        width: 300px;
+        margin: 35px auto 0;
+      }
+      .first-row {
+        width: 300px;
+        margin-bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        .sports-and-activis {
+          @include discover-holiday(320px, 120px, 10px);
+          display: block;
+          background: {
+            image: url(./images/Sport-and-Activis-320.png);
+            size: cover;
+            repeat: no-repeat;
+          }
+        }
+        .wellness-and-health {
+          @include discover-holiday(320px, 120px, 10px);
+          background: {
+            image: url(./images/Healath-320.png);
+            size: contain;
+            repeat: no-repeat;
+          }
+        }
+        .extreme-sports {
+          @include discover-holiday(320px, 120px, 10px);
+          background: {
+            image: url(./images/Extreme-320.png);
+            size: contain;
+            repeat: no-repeat;
+          }
+        }
+        .games {
+          @include discover-holiday(320px, 120px, 10px);
+          background: {
+            image: url(./images/Games-320.png);
+            size: contain;
+            repeat: no-repeat;
+          }
+        }
+        .culture-and-education {
+          @include discover-holiday(320px, 120px, 10px);
+          background: {
+            image: url(./images/Culture-320.png);
+            size: contain;
+            repeat: no-repeat;
+          }
+        }
+        .enjomet-and-relaxation {
+          @include discover-holiday(320px, 120px, 10px);
+          background: {
+            image: url(./images/Enjomet-320.png);
+            size: contain;
+            repeat: no-repeat;
+          }
+        }
+        .trevelling {
+          @include discover-holiday(320px, 120px, 10px);
+          background: {
+            image: url(./images/Travelling-320.png);
+            size: contain;
+            repeat: no-repeat;
+          }
+        }
+      }
+      .form {
+        width: 280px;
+        h3 {
+          margin-bottom: -26px;
+        }
+        .question {
+          width: 280px;
+        }
+        .buttons-form {
+          width: 280px;
+          margin-top: 0;
+          display: flex;
+          flex-wrap: wrap;
+          .enter {
+            margin-top: 15px;
+          }
+
+          .search {
+            @include size(280px, 40px);
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+    footer {
+      width: 320px;
+      margin-top: 40px;
+      .footer-content {
+        width: 320px;
+        margin: 19px auto 0;
+        display: block;
+        .menu {
+          width: 280px;
+          padding: 0 46px;
+          display: block;
+          .container {
+            text-align: center;
+          }
+          .info-about {
+            margin: 13px auto 0;
+            text-align: center;
+            ul {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-around;
+            }
+          }
+          .partners {
+            margin-top: 6px;
+            text-align: center;
+          }
+        }
+        .designed-by {
+          width: 320px;
+          display: flex;
+          justify-content: center;
+          .designed-content {
+            margin: 14px 0 0 13px;
+            p {
+              margin: 0px 0 7px 17px;
+            }
+            .logo {
+              margin-right: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@mixin properties($l, $c, $t) {
+  line-height: $l;
+  color: $c;
+  text-align: $t;
+}
+
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin background($w, $s, $p) {
+  width: $w;
+  background-size: $s;
+  background-position: $p;
+}
+
+@mixin discover-holiday($w, $h, $m) {
+  width: $w;
+  height: $h;
+  margin-bottom: $m;
+}
